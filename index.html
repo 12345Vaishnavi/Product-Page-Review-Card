@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Product Card Review Page</title>
+ <style>
+  .product_card_img{
+    width:400px;
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0px grey;
+    display: block;
+    margin: 35px auto;
+    padding: 15px 0;
+  }
+
+  .product-img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .product_img_container{
+    display: flex;
+    justify-content: center;
+  }
+
+
+ </style>
+</head>
+<body>
+  <img src="./images/1.jpg" class="product_card_img" id="product_card_img"/>  
+  <div class="product_img_container">
+   <img src="./images/1.jpg" class="product-img" onclick="changeImage(1)"/>
+   <img src="./images/2.jpg" class="product-img" onclick="changeImage(2)"/>
+   <img src="./images/3.jpg" class="product-img" onclick="changeImage(3)"/>
+   <img src="./images/4.jpg" class="product-img" onclick="changeImage(4)"/>
+   <img src="./images/5.jpg" class="product-img" onclick="changeImage(5)"/>
+   <img src="./images/6.jpg" class="product-img" onclick="changeImage(6)"/>
+  </div>
+
+  <script>
+   function changeImage(num)
+   {
+     const mainImage = document.getElementById("product_card_img");
+
+     if(num==1)
+     {
+       mainImage.src = './images/1.jpg';
+     }else if(num==2){
+        mainImage.src = './images/2.jpg'; 
+     }else if(num==3)
+     {
+       mainImage.src = './images/3.jpg';  
+     }else if(num==4)
+     {
+        mainImage.src = './images/4.jpg';
+     }else if(num==5)
+     {
+        mainImage.src = './images/5.jpg';
+     }else if(num==6)
+     {
+        mainImage.src = './images/6.jpg';
+     }
+   }
+
+  </script>
+    
+</body>
+</html>
